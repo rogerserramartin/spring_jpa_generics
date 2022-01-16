@@ -2,6 +2,7 @@ package com.roger.springjpa;
 
 import com.roger.springjpa.entity.Merchandise;
 import com.roger.springjpa.repository.MerchandiseRepository;
+import com.roger.springjpa.service.MerchandiseService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,13 +20,37 @@ class SpringJpaApplicationTests {
 		MerchandiseRepository merchandiseRepository = context
 				.getBean(MerchandiseRepository.class);
 
+		/*
 		Merchandise finalFantasy = Merchandise.builder()
 				.brand("Stranger of Paradise")
 				.price(70d)
 				.build();
 
 		merchandiseRepository.save(finalFantasy);
-		
+		*/
+
+		Merchandise forspoken = Merchandise.builder()
+				.brand("Forspoken")
+				.price(70d)
+				.build();
+
+		merchandiseRepository.save(forspoken);
+
+
+	}
+
+	@Test
+	void pruebaBuena(){
+		MerchandiseService merchandiseService = context
+				.getBean(MerchandiseService.class);
+
+		Merchandise zelda = Merchandise.builder()
+				.brand("The legend of Zelda: Breath of the Wild")
+				.price(69.99)
+				.build();
+
+		merchandiseService.saveMerchandise(zelda);
+
 	}
 
 }
