@@ -17,12 +17,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import java.io.ObjectInputFilter;
 import java.util.List;
 
-@Configuration
-@EnableJpaRepositories("com.roger.springjpa.repository") // IMPRESCINDIBLEEEEEEEEEEE!!!!!!
-@EntityScan("com.roger.springjpa.entity") //IMPRESCINDIBLE!!!!!!!!! los 3 PARA QUE FUNCIONE AUTOWIRED SIN CONTROLADOR REST
-@ComponentScan("com.roger.springjpa.service") //ESTE TAMBIEN
+//@Configuration
+//@EnableJpaRepositories("com.roger.springjpa.repository") // Si nos pasaramos la arquitectura de springboot por el forro tocaria hacer esto de abajo
+//@EntityScan("com.roger.springjpa.entity")
+//@ComponentScan("com.roger.springjpa.service")
 
-@EnableTransactionManagement
 @SpringBootApplication
 public class SpringJpaApplication {
 

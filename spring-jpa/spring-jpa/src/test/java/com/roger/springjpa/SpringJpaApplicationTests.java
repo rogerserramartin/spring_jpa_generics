@@ -44,12 +44,12 @@ class SpringJpaApplicationTests {
 		MerchandiseService merchandiseService = context
 				.getBean(MerchandiseService.class);
 
-		Merchandise zelda = Merchandise.builder()
-				.brand("The legend of Zelda: Breath of the Wild")
-				.price(69.99)
+		Merchandise bravely = Merchandise.builder()
+				.brand("Bravely Default: Airy Lies")
+				.price(39.99)
 				.build();
 
-		merchandiseService.saveMerchandise(zelda);
+		merchandiseService.saveMerchandise(bravely);
 
 	}
 
